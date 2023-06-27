@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Площадь параллелограмма по двум сторонам и острому углу</title>
+ <script type="text/javascript" src="https://gc.kes.v2.scr.kaspersky-labs.com/7EA5E9BB-55E1-4C31-9C21-4943DDFED2E4/main.js?attr=EsEFTLiWzpY4GQV4JoMKely3Q72HU8gLVIsm3PahH97kdiyrJhjejIYZvryYIAJc0oC9OdPkcFlKBb-TkOTNQpj7tRbdL3aC21w32MiVMDjTZYnL5W5OqObn3zh4j2xgJL93aWfC4rVqnj8TX2rdDXkewCZ5x3fexLwiXfIRz6gFqbhEC_ts4CNVohncwxgDVS9TIfgbQGMWxaurRAgF58-zi3ifhwE4aySdBrHpOCF81BRYJ8EyN6P2AwAD-WYYoBrwfgnagGLyRCTmWzwOz8vqPposLcQKIY_DQS7SX3yaVn1Xd7AewPq819ZZszMa6VfHSleX77YWPfUuF4kWNaylBQzdq3r44hRcWm7hlC5r-vATPtHXw1CyWoJ8J8xhYZTM7si7jJYdqygX0bL71EqO0PgBndndLmxj6KIUswtyZRUT9hlnAXYQE3NVa919ETgDXkz3RoTqZSA6xIbJlPls1UiJOu4MADc3x17C37_o3GJRE-5PyU8G9MHyGh1nVxVX7PUElN7ggNmFMxk4KP4kfltIWegPjua9AbOtCPK-VesqyGA93sFHWYDPg22VkJzBMaorTmgbystxsR7XVKGKpVCNTEowUM4PtQktnu21E2LmFBZUrjXsNpscXLXb5ABE684RGjuM8uTJkixSc81KJasj4WmatjHYRovoYildwS-L2E0VXbs1eEmxT-EAfNhvp6yBRlJv8XhhEphldqX57HTz1e82vI4oggD35M-VdwbLs7JQplgSkCXg-L3HdmbMxSmC-mTHMO3NmEXpM33JtLC5UV_JVgpniZDhPkVboNjdrgPZYfIQxLkgIJeLGLwW2dITg140IVwDJ9aKVxBwPKy3Lci-BMzGuea-RrmVyfVfCXgtA0uSEvgDchAw-vh9yg4rmtnztckSCqPooCb5rANW3vsb1wUfLMAOLXD0GvXVoUXwpBzFhyjW12aac-mSgtBx0BrTaYzqhv1IJdZHeguKyqFHRxiRt7wwWmw" charset="UTF-8"></script></head>
+ <body>  
+    <label>Введите сторону a<br>
+	    <input id="input_a" value="" type="text">
+	</label>
+    <br><br>
+    <label>Введите сторону b<br>
+	    <input id="input_b" value="" type="text">
+	</label>
+    <br><br>
+    <label>Введите угол между a и b<br>
+	    <input id="input_A" value="" type="text">
+	</label>
+    <br><br>
+	<label>Нажми на кнопку<br>
+	    <input value="Вычислить" type="button" onclick="event.preventDefault(); ParalPloch()">
+	</label>
+    <br><br>
+<div id="answer">
+    Площадь равен
+</div>	
+ </body>
+</html>
+
+
+
+
+<script>
+
+function ParalPloch() {
+    
+	let a = document.getElementById("input_a").value;
+	let b = document.getElementById("input_b").value;
+	let A = document.getElementById("input_A").value;
+	let pi = 3.1415926535;
+	let S = Math.abs(a*b*Math.sin(A*pi/180));
+	document.getElementById("answer").innerHTML = S.toFixed(0);
+}
+
+
+</script>
